@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puso At Resibo</title>
+    <link rel="icon" href="icons8-pink-48.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/allocation.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-bar">
+        <h2>Puso at Resibo</h2>
+        <button class="btn btn-primary d-md-none" id="burgerMenuBtn">☰</button>
+    </header>
+
+    <div class="container-fluid d-flex p-0">
+        <!-- Sidebar -->
+        <div class="sidebar p-4" id="sidebar">
+            <nav class="nav flex-column" >
+                <a class="nav-link" href="dashboard.html">Dashboard</a>
+                <a class="nav-link active" href="donation.html" >Donations</a>
+                <a class="nav-link" href="allocation.html" style="background-color: #ff0084; border-radius: 5px; color: #f8f9fa;">Allocations</a>
+                <a class="nav-link" href="utilization.html">Utilizations</a>
+                <a class="nav-link" href="profile.html">Profile</a>
+                <a class="nav-link" href="settings.html">Settings</a>
+                <a class="nav-link" href="#">Support</a>
+                
+                <a href="index.html"><button class="btn btn-logout">Log Out</button></a>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="container mt-5 main-content" id="mainContent">
+            <div class="card">
+                    <div class="card-header d-flex justify-content-between" style="background-color: #a539cc;">
+                        <h4 class="text-left" style="color: white;">Allocations Summary</h4>
+                        <button class="btn btn-light" id="openDrawerBtn" style="font-weight: bold; color: #a539cc;">Add Receipt</button>
+
+                    </div>
+                    <div class="card-body ">
+                        
+                        <!-- Donations Table -->
+                        <div class="mt-4 table-responsive">
+                            
+                            <table class="table table-hover">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Reference Number</th>
+                                        <th>Person In Charge</th>
+                                        <th>Program Name</th>
+                                        <th>Project Category</th>
+                                        <th>Geographical Area</th>
+                                        <th>Project Duration</th>
+                                        <th>Total Budget</th>
+                                        <th>Equipment Cost</th>
+                                        <th>Personnel Cost</th>
+                                        <th>Transportation Cost</th>
+                                        <th>Training Cost</th>
+                                        <th>Supplies Cost</th>
+                                        <th>Overhead Cost</th>
+                                        <th>Number of Beneficiaries</th>
+                                        <th></th>
+                                        <th></th>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody id="allocationsTable">
+                                    <tr>
+                                        <td colspan="18" class="text-center">No allocations yet.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+            </div>
+        </div>
+
+        
+    </div>
+
+    <!-- Donation Drawer -->
+    <div id="drawer">
+        <div class="drawer-header">
+            <h5>Allocation Form</h5>
+            <button id="closeDrawerBtn">Close</button>
+        </div>
+        <form id="allocationForm">
+            <!-- Personal Information -->
+            <h6>Organizational Details:</h6>
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <label for="registrationNumber" class="form-label">Registration Number</label>
+                        <input type="text" id="registrationNumber" class="form-control" required>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="contactPerson" class="form-label">Contact Person</label>
+                        <input type="text" id="contactPerson" class="form-control" required>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="totalBudget" class="form-label">Total Budget Received</label>
+                        <input type="number" id="totalBudget" class="form-control" required>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="budgetPeriodStart" class="form-label">Budget Period (Start Date)</label>
+                        <input type="date" id="budgetPeriodStart" class="form-control" required>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="budgetPeriodEnd" class="form-label">Budget Period (End Date)</label>
+                        <input type="date" id="budgetPeriodEnd" class="form-control" required>
+                    </div>
+                    <div class="col-md-5 mb-3">
+                        <label for="fundingSources" class="form-label">Funding Sources</label>
+                        <select id="fundingSources" class="form-select" required>
+                            <option>Government</option>
+                            <option>Private Donors</option>
+                            <option>International Grants</option>
+                            <option>Corporate Sponsorships</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <!-- Budget Allocation -->
+                <h6>Budget Allocation:</h6>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="projectName" class="form-label">Program/Project Name</label>
+                        <input type="text" id="projectName" class="form-control" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="projectCategory" class="form-label">Project Category</label>
+                        <select id="projectCategory" class="form-select" required>
+                            <option value="">Select Project Category</option>
+                            <option value="Health">Health</option>
+                            <option value="Education">Education</option>
+                            <option value="Environment">Environment</option>
+                            <option value="Economic Development">Economic Development</option>
+                            <option value="Disaster Relief">Disaster Relief</option>
+                            <option value="Human Rights">Human Rights</option>
+                            <option value="Animal Welfare">Animal Welfare</option>
+                            <option value="Technology & Innovation">Technology & Innovation</option>
+                            <option value="Agriculture">Agriculture</option>
+                            <option value="Water & Sanitation">Water & Sanitation</option>
+                            <option value="Youth Empowerment">Youth Empowerment</option>
+                            <option value="Gender Equality">Gender Equality</option>
+                            <option value="Infrastructure Development">Infrastructure Development</option>
+                            <option value="Disability Inclusion">Social</option>
+                            <option value="Cultural Preservation">Cultural Preservation</option>
+                            <option value="Sustainable Energy">Sustainable Energy</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="allocatedBudget" class="form-label">Allocated Budget Amount</label>
+                        <input type="number" id="allocatedBudget" class="form-control" required>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="budgetPercentage" class="form-label">Percentage of Total Budget</label>
+                        <input type="number" id="budgetPercentage" class="form-control" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="geographicalArea" class="form-label">Specific Geographical Target Area</label>
+                        <select id="geographicalArea" class="form-select" required>
+                            <option value="">Select Geographical Area</option>
+                            <option value="Urban Areas">Urban Areas</option>
+                            <option value="Rural Areas">Rural Areas</option>
+                            <option value="Provincial Regions">Provincial Regions</option>
+                            <option value="National">National</option>
+                            <option value="International">International</option>
+                            <option value="Local Communities">Local Communities</option>
+                            <option value="Coastal Areas">Coastal Areas</option>
+                            <option value="Mountainous Regions">Mountainous Regions</option>
+                            <option value="Disaster-Prone Areas">Disaster-Prone Areas</option>
+                            <option value="Remote Areas">Remote Areas</option>
+                            <option value="Low-Income Communities">Low-Income Communities</option>
+                            <option value="Tropical Zones">Tropical Zones</option>
+                            <option value="Suburban Areas">Suburban Areas</option>
+                            <option value="Highland Areas">Highland Areas</option>
+                            <option value="Wilderness Areas">Wilderness Areas</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="beneficiaries" class="form-label">Expected Number of Beneficiaries</label>
+                        <input type="text" id="beneficiaries" class="form-control" required>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="projectDuration" class="form-label">Project Duration</label>
+                        <input type="text" id="projectDuration" class="form-control" required>
+                    </div>
+                    <br>
+
+                    <!-- Detailed Budget Breakdown -->
+                    <h6>Detailed Budget Breakdown:</h6>
+                    <div class="col-md-3 mb-3">
+                        <label for="personnelCosts" class="form-label">Personnel Costs</label>
+                        <input type="number" id="personnelCosts" class="form-control" required>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="equipmentCosts" class="form-label">Equipment</label>
+                        <input type="number" id="equipmentCosts" class="form-control" required>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="transportationCosts" class="form-label">Transportation</label>
+                        <input type="number" id="transportationCosts" class="form-control" required>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="trainingCosts" class="form-label">Training</label>
+                        <input type="number" id="trainingCosts" class="form-control" required>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="suppliesCosts" class="form-label">Supplies</label>
+                        <input type="number" id="suppliesCosts" class="form-control" required>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="overheadCosts" class="form-label">Administrative Overhead</label>
+                        <input type="number" id="overheadCosts" class="form-control" required>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label for="alignmentMission" class="form-label">Alignment with Organizational Mission</label>
+                        <input type="text" id="alignmentMission" class="form-control" rows="3" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="riskAssessment" class="form-label">Risk Assessment</label>
+                        <textarea id="riskAssessment" class="form-control" rows="3" required></textarea>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="sustainabilityPlan" class="form-label">Sustainability Plan</label>
+                        <textarea id="sustainabilityPlan" class="form-control" rows="3" required></textarea>
+                    </div>
+                </div>
+
+            <button type="submit" class="btn btn-success">Submit Allocation</button>
+        </form>
+    </div>
+
+    <script src="js/allocation.js"></script>
+    <script src="js/burger.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puso At Resibo</title>
+    <link rel="icon" href="icons8-pink-48.png" type="image/png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/settings.css">
+    
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-bar">
+        <h2>Puso at Resibo</h2>
+        <button class="btn btn-primary d-md-none" id="burgerMenuBtn">☰</button>
+    </header>
+
+    <div class="container-fluid d-flex p-0">
+        <!-- Sidebar -->
+        <div class="sidebar p-4" id="sidebar">
+            <nav class="nav flex-column">
+                <a class="nav-link" href="dashboard.html" >Dashboard</a>
+                <a class="nav-link" href="donation.html">Donations</a>
+                <a class="nav-link" href="allocation.html">Allocations</a>
+                <a class="nav-link" href="utilization.html">Utilizations</a>
+                <a class="nav-link active" href="profile.html" >Profile</a>
+                <a class="nav-link" href="settings.html" style="background-color: #ff0084; border-radius: 5px; color: #f8f9fa;">Settings</a>
+                <a class="nav-link" href="#">Support</a>
+                <a href="index.html"><button class="btn btn-logout">Log Out</button></a>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="container main-content" id="mainContent">
+            <div class="settingsh1">
+                <h1>SETTINGS</h1>
+            </div>
+            <ul class="nav nav-tabs" id="settingsTab" role="tablist">
+                <!-- NGO Profile Tab --> 
+                <li class="nav-item" role="presentation"> 
+                    <button class="nav-link active" id="ngo-profile-tab" data-bs-toggle="tab" data-bs-target="#ngo-profile" type="button" role="tab" aria-controls="ngo-profile" aria-selected="true">NGO Profile</button> 
+                </li> 
+                <!-- Contact Info Tab --> 
+                <li class="nav-item" role="presentation"> 
+                    <button class="nav-link" id="contact-info-tab" data-bs-toggle="tab" data-bs-target="#contact-info" type="button" role="tab" aria-controls="contact-info" aria-selected="false">Contact Info</button> 
+                </li> 
+                <!-- Mission, Vision, Goals Tab --> 
+                <li class="nav-item" role="presentation"> 
+                    <button class="nav-link" id="mission-vision-goals-tab" data-bs-toggle="tab" data-bs-target="#mission-vision-goals" type="button" role="tab" aria-controls="mission-vision-goals" aria-selected="false">Mission, Vision, Goals</button> 
+                </li>
+                
+            </ul>
+            <div class="tab-content" id="settingsTabContent">
+                <!-- NGO Profile Tab Content -->
+                 <div class="tab-pane fade show active" id="ngo-profile" role="tabpanel" aria-labelledby="ngo-profile-tab">
+                    <form id="ngo-profile-form">
+                        <div class="row">
+                            <div class="col-md-5 mb-3 mt-3"> 
+                                <label for="ngoName" class="form-label">Official NGO Name</label> 
+                                <input type="text" class="form-control" id="ngoName" placeholder="Enter NGO name" required> 
+                            </div>
+                            <div class="col-md-5 mb-3 mt-3"> 
+                                <label for="registrationNumber" class="form-label">Registration Number</label> 
+                                <input type="text" class="form-control" id="registrationNumber" placeholder="Enter registration number" required> 
+                            </div> 
+                            <div class="col-md-2 mb-3 mt-3"> 
+                                <label for="establishmentDate" class="form-label">Date of Establishment</label> 
+                                <input type="date" class="form-control" id="establishmentDate" required> 
+                            </div> 
+                            <div class="mb-3"> 
+                                <label for="foundingTeam" class="form-label">Founder/Founding Team Details</label> 
+                                <textarea class="form-control" id="foundingTeam" rows="3" placeholder="Enter founder/founding team details" required></textarea> 
+                            </div> 
+                        </div>
+                            <button type="submit" class="btn btn-primary">Save Changes</button> 
+                    </form> 
+                </div> 
+                <!-- Contact Info Tab Content --> 
+                <div class="tab-pane fade" id="contact-info" role="tabpanel" aria-labelledby="contact-info-tab"> 
+                    <form id="contact-info-form"> 
+                        <div class="row">
+
+                            <div class="col-md-5 mb-3 mt-3"> 
+                                <label for="officialAddress" class="form-label">Official Address</label> 
+                                <input type="text" class="form-control" id="officialAddress" placeholder="Enter official address" required> 
+                            </div> 
+                            <div class="col-md-3 mb-3 mt-3"> 
+                                <label for="contactNumbers" class="form-label">Contact Numbers</label> 
+                                <input type="text" class="form-control" id="contactNumbers" placeholder="Enter contact numbers" required> 
+                            </div> 
+                            <div class="col-md-4 mb-3 mt-3"> 
+                                <label for="officialEmail" class="form-label">Official Email</label> 
+                                <input type="email" class="form-control" id="officialEmail" placeholder="Enter official email" required> 
+                            </div> 
+                            <div class="col-md-4 mb-3"> 
+                                <label for="websiteURL" class="form-label">Website URL</label> 
+                                <input type="url" class="form-control" id="websiteURL" placeholder="Enter website URL" required> 
+                            </div> 
+                            <div class="col-md-6 mb-3"> 
+                                <label for="socialMediaHandles" class="form-label">Social Media Handles</label> 
+                                <input type="text" class="form-control" id="socialMediaHandles" placeholder="Enter social media handles" required> 
+                            </div> 
+                            <div class=" col-md-3 mb-3"> 
+                                <label for="secDocuments" class="form-label">SEC/Government Registration Documents</label> 
+                                <input type="file" class="form-control" id="secDocuments"> 
+                            </div> 
+                            <div class="col-md-4 mb-3"> 
+                                <label for="taxID" class="form-label">Tax Identification Number</label> 
+                                <input type="text" class="form-control" id="taxID" placeholder="Enter tax identification number" required> 
+                            </div>
+                            <div class="col-md-4 mb-3"> 
+                                <label for="verify" class="form-label">Transparency Verification Badge</label> 
+                                <input type="text" class="form-control" id="verify" placeholder="Verified/Not Verified" required> 
+                            </div>
+                        </div> 
+                        <button type="submit" class="btn btn-primary">Save Changes</button> 
+                    </form> 
+                </div> 
+                <!-- Mission, Vision, Goals Tab Content --> 
+                 <div class="tab-pane fade" id="mission-vision-goals" role="tabpanel" aria-labelledby="mission-vision-goals-tab"> 
+                    <form id="mission-vision-goals-form"> 
+                        <div class="mb-3 mt-3"> 
+                            <label for="missionStatement" class="form-label">Mission Statement</label> 
+                            <textarea class="form-control" id="missionStatement" rows="3" placeholder="Enter mission statement" required></textarea> 
+                        </div> 
+                        <div class="mb-3"> 
+                            <label for="coreValues" class="form-label">Vision</label> 
+                            <textarea class="form-control" id="coreValues" rows="3" placeholder="Enter Vision" required></textarea> 
+                        </div> 
+                        <div class="mb-3"> 
+                            <label for="organizationalGoals" class="form-label">Organizational Goals</label> 
+                            <textarea class="form-control" id="organizationalGoals" rows="3" placeholder="Enter organizational goals" required></textarea> 
+                        </div> 
+                        <div class="mb-3"> 
+                            <label for="strategicObjectives" class="form-label">Core Values</label> 
+                            <textarea class="form-control" id="strategicObjectives" rows="3" placeholder="Enter core values" required></textarea> 
+                        </div> 
+                        <div class="mb-3"> 
+                            <label for="advocacyAreas" class="form-label">Detailed Description of Advocacy Areas</label> 
+                            <textarea class="form-control" id="advocacyAreas" rows="3" placeholder="Enter advocacy areas" required></textarea> 
+                        </div> 
+                        <button type="submit" class="btn btn-primary">Save Changes</button> 
+                    </form> 
+                </div>
+                
+                
+            </div>
+        </div>
+        
+    </div>
+    
+    <script src="js/settings.js"></script>
+    <script src="js/burger.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

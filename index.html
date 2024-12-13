@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puso At Resibo</title>
+    <link rel="icon" href="icons8-pink-48.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/land.css">
+</head>
+<body>
+
+    
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand text-white" href="index.html" style="font-weight: bold;">Puso At Resibo</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login / Sign Up</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    
+    <section class="hero-section">
+        <div class="container">
+            <h1>Welcome to Puso At Resibo</h1>
+            <p>Empowering NGOs with Transparent Financial Tracking</p>
+            <a href="#" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#loginModal" style="font-weight: bolder; color: #f8f9fa; background-color: #ff0084;">Join Us</a>
+        </div>
+    </section>
+
+    
+    <section id="about" class="container">
+        <h1 class="section-heading text-center my-5" style="font-weight: bold; color: var(--primary-color);">Our Mission</h1>
+        <div class="card-deck">
+            <div class="card">
+                <img src="transparent.jpg" alt="Design">
+                <div class="card-body">
+                    <h5>Transparency</h5>
+                    <p>We believe in full transparency with donations, fund allocations, and project execution through detailed receipts and reports.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="Accountability.jpg" alt="SEO">
+                <div class="card-body">
+                    <h5>Accountability</h5>
+                    <p>Ensuring accountability for every peso through accessible and verifiable financial records.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="earth.png" alt="App Development">
+                <div class="card-body">
+                    <h5>Impact</h5>
+                    <p>Making a meaningful impact by fostering trust between NGOs and their communities with reliable data.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="parallax-section">
+        <div>
+            <h2>Building Trust Through Transparency</h2>
+            <p>
+              We help NGOs maintain a transparent system for tracking donations and fund utilization, allowing the public to see where their contributions go.</p>
+        </div>
+    </section>
+
+    
+    <section class="services-section">
+        <h2>Our Services</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <h5>Donation Receipt Generation</h5>
+                        <p>Generate detailed receipts for every donation made, ensuring clarity and trust.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <h5>Fund Allocation Transparency</h5>
+                        <p>Display how funds are allocated and used in real-time, enhancing transparency for donors.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <h5>Project Tracking</h5>
+                        <p>Track the progress of ongoing projects and show how funds are utilized for each initiative.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <footer>
+        <p style="color: #ff0084;">&copy; 2024 Puso At Resibo. All rights reserved. <br>
+          <p><p>Developer | John Maurice P. Sison | CCMS</p></p> 
+          <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+    
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    
+                    <form>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100"><a href="dashboard.html" style="text-decoration: none; color: white;">Login</a></button>
+                    </form>
+                    <hr>
+                    
+                    <p>Don't have an account? <a href="dashboard.html">Sign up here</a></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary"><a href="dashboard.html" style="text-decoration: none; color: white;">Sign Up</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

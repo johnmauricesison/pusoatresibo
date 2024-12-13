@@ -1,0 +1,36 @@
+
+.main-content {
+    margin-left: 400px; 
+}
+
+
+.profileh1{
+    text-align: left;
+    color: rgb(255, 0, 132);
+    font-weight: bold;
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+}
+
+.profile-container { 
+    max-width: 800px; 
+    margin: 20px auto; 
+} 
+
+.profile-header { 
+    background-color: #f8f9fa; 
+    padding: 20px; 
+    border-radius: 8px; 
+    margin-bottom: 20px; 
+    position: relative; 
+} 
+
+
+
+
+.card-info { 
+    background-color: #f8f9fa; 
+    padding: 20px; 
+    border-radius: 8px; 
+    margin-bottom: 20px; 
+}

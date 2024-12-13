@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puso At Resibo</title>
+    <link rel="icon" href="icons8-pink-48.png" type="image/png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/profile.css">
+    
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-bar">
+        <h2>Puso at Resibo</h2>
+        <button class="btn btn-primary d-md-none" id="burgerMenuBtn">☰</button>
+    </header>
+
+    <div class="container-fluid d-flex p-0">
+        <!-- Sidebar -->
+        <div class="sidebar p-4" id="sidebar">
+            <nav class="nav flex-column">
+                <a class="nav-link" href="dashboard.html" >Dashboard</a>
+                <a class="nav-link" href="donation.html">Donations</a>
+                <a class="nav-link" href="allocation.html">Allocations</a>
+                <a class="nav-link" href="utilization.html">Utilizations</a>
+                <a class="nav-link active" href="profile.html" style="background-color: #ff0084; border-radius: 5px; color: #f8f9fa;">Profile</a>
+                <a class="nav-link" href="settings.html">Settings</a>
+                <a class="nav-link" href="#">Support</a>
+                <a href="index.html"><button class="btn btn-logout">Log Out</button></a>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="container main-content " id="mainContent">
+            <div class="profileh1">
+                <h1>PROFILE</h1>
+            </div>
+            <div class="accordion" id="profileAccordion">
+                <!-- Organizational Identification Section -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Organizational Identification
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#profileAccordion">
+                        <div class="accordion-body">
+                            <div class="profile-header text-start">
+                                <h2 id="profile-ngo-name" style="color: #ff0084;">Official NGO Name</h2><br>
+                                <p><strong>Registration Number:</strong> <span id="profile-registration-number">123456789</span></p> 
+                                <p><strong>Date of Establishment:</strong> <span id="profile-establishment-date">January 1, 2000</span></p> 
+                                <p><strong>Legal Structure:</strong> <span id="profile-legal-structure">Non-Profit</span></p> 
+                                <p><strong>Founder/Founding Team:</strong> <span id="profile-founding-team">Jane Doe, John Smith</span></p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Contact and Verification Information Section -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Contact and Verification Information
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#profileAccordion">
+                        <div class="accordion-body">
+                            <div class="card-info">
+                                <h5 style="color: #ff0084;">Contact and Verification Information</h5><br>
+                                <p><strong>Official Address:</strong> <span id="profile-official-address">123 NGO Street, City, Country</span></p> 
+                                <p><strong>Contact Numbers:</strong> <span id="profile-contact-numbers">(123) 456-7890</span></p> 
+                                <p><strong>Official Email:</strong> <span id="profile-official-email">contact@ngo.org</span></p> 
+                                <p><strong>Website URL:</strong> <span id="profile-website-url">www.ngo.org</span></p> 
+                                <p><strong>Social Media Handles:</strong> <span id="profile-social-media-handles">@ngo (Twitter, Facebook)</span></p> 
+                                <p><strong>SEC/Government Registration Documents:</strong> <a id="profile-sec-documents" href="#">View</a></p> 
+                                <p><strong>Tax Identification Number:</strong> <span id="profile-tax-id">987654321</span></p> 
+                                <p><strong>Transparency Verification Badge:</strong> <span id="profile-transparency-verification">Verified</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Mission and Vision Section -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Mission, Vision, and Goals
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#profileAccordion">
+                        <div class="accordion-body">
+                            <div class="card-info">
+                                <h5 style="color: #ff0084;">Mission, Vision, and Goals</h5><br>
+                                <p><strong>Mission Statement:</strong> <span id="profile-mission-statement">Our mission is to make the world a better place.</span></p> 
+                                <p><strong>Core Values:</strong> <span id="profile-core-values">Integrity, Excellence, Compassion</span></p> 
+                                <p><strong>Organizational Goals:</strong> <span id="profile-organizational-goals">Empower communities, Promote education, Support healthcare</span></p> 
+                                <p><strong>Long-term Strategic Objectives:</strong> <span id="profile-strategic-objectives">Achieve sustainable development goals by 2030.</span></p> 
+                                <p><strong>Detailed Description of Advocacy Areas:</strong> <span id="profile-advocacy-areas">Our advocacy areas include environmental protection, human rights, and economic development.</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            Financial Transparency
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#profileAccordion">
+                        <div class="accordion-body">
+                            <div class="card-info">
+                                <h5 style="color: #ff0084;">Financial Transparency</h5><br>
+                                <p id="budgetOverview"><strong>Annual Budget Overview:</strong> $2,000,000</p>
+                                <p><strong>Audited Financial Statements:</strong> <a href="#">View</a></p>
+                                <p><strong>Independent Audit Reports:</strong> <a href="#">View</a></p>
+                                <p><strong>Donor Contribution Tracking:</strong> <a href="#">View</a></p>
+                                <p><strong>Financial Health Indicators:</strong> <a href="#">View</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSix">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            Impact and Achievements
+                        </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#profileAccordion">
+                        <div class="accordion-body">
+                            <div class="card-info">
+                                <h5 style="color: #ff0084;">Impact and Achievements</h5><br>
+                                <p><strong>Total Projects Completed:</strong> <span id="profile-total-projects">120</span></p> 
+                                <p><strong>Cumulative Beneficiaries Served:</strong> <a href="#">View </a></p> 
+                                <p><strong>Geographical Reach:</strong> <a href="#">View </a></p> 
+                                <p><strong>Key Performance Indicators:</strong><a href="#">View KPIs</a></p> 
+                                <p><strong>Success Stories:</strong> <a href="#">Read Stories</a></p> 
+                                <p><strong>Impact Metrics:</strong> <a href="#">View Metrics</a></p> 
+                                <p><strong>Project Galleries:</strong> <a href="#">View Gallery</a></p> 
+                                <p><strong>Beneficiary Testimonials:</strong> <a href="#">Read Testimonials</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSeven">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                            Compliance and Certifications
+                        </button>
+                    </h2>
+                    <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#profileAccordion">
+                        <div class="accordion-body">
+                            <div class="card-info">
+                                <h5 style="color: #ff0084;">Compliance and Certifications</h5><br>
+                                <p><strong>Government Compliance Certificates:</strong> <a id="profile-compliance-certificates"  href="#">View</a></p> 
+                                <p><strong>Accreditation Badges:</strong> <a id="profile-accreditation-badges" href="#">View</a></p> 
+                                <p><strong>Awards and Recognitions:</strong> <a id="profile-awards-recognitions" href="#">View</a></p> 
+                                <p><strong>Transparency Rankings:</strong> <a id="profile-transparency-rankings" href="#">View Rankings</a></p> 
+                                <p><strong>Compliance Documentation:</strong> <a id="profile-compliance-docs" href="#">View</a></p> 
+                                <p><strong>Annual Report Archives:</strong> <a id="profile-annual-reports" href="#">View Archives</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/profile.js"></script>
+    <script src="js/burger.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

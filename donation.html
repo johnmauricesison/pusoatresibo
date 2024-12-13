@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donations Page</title>
+    <link rel="icon" href="icons8-pink-48.png" type="image/png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/donation.css">
+       
+</head>
+<body>
+    <!-- Header -->
+    <header class="header-bar">
+        <h2>Puso at Resibo</h2>
+        <button class="btn btn-primary d-md-none" id="burgerMenuBtn">☰</button>
+    </header>
+
+    <div class="container-fluid d-flex p-0">
+        <!-- Sidebar -->
+        <div class="sidebar p-4" id="sidebar">
+            <nav class="nav flex-column">
+                <a class="nav-link" href="dashboard.html">Dashboard</a>
+                <a class="nav-link active" href="donation.html" style="background-color: #ff0084; border-radius: 5px; color: #f8f9fa;">Donations</a>
+                <a class="nav-link" href="allocation.html">Allocations</a>
+                <a class="nav-link" href="utilization.html">Utilizations</a>
+                <a class="nav-link" href="profile.html">Profile</a>
+                <a class="nav-link" href="settings.html">Settings</a>
+                <a class="nav-link" href="#">Support</a>
+                <a href="index.html"><button class="btn btn-logout">Log Out</button></a>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="container mt-5 main-content " id="mainContent">
+            <div class="card">
+                    <div class="card-header d-flex justify-content-between" style="background-color: #2d9ce0;">
+                        <h4 class="text-left" style="color: white;">Donation Summary</h4>
+                        <button class="btn btn-light" id="openDrawerBtn" style="font-weight: bold; color: #2d9ce0;">Add Receipt</button>
+                    </div>
+                    <div class="card-body">
+                        
+
+                        <!-- Donations Table -->
+                        <div class="mt-4 table-responsive">
+                            <table class="table table-hover">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Donor Full Name</th>
+                                        <th> Date</th>
+                                        <th> Amount</th>
+                                        <th>Currency</th>
+                                        <th> Type</th>
+                                        <th>Payment Method</th>
+                                        <th>Project Preference</th>
+                                        <th>Source</th>
+                                        <th>Reason</th>
+                                        <th>Anonymous</th>
+                                        <th>Tax Receipt</th>
+                                        <th>Consent for Communication</th>
+                                        
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="donationsTable">
+                                    <tr>
+                                        <td colspan="18" class="text-center">No donations yet.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+            </div>
+        </div>
+
+        
+    </div>
+
+    <!-- Donation Drawer -->
+    <div id="drawer">
+        <div class="drawer-header">
+            <h5>Donation Form</h5>
+            <button id="closeDrawerBtn">Close</button>
+        </div>
+        <form id="donationForm">
+            <!-- Personal Information -->
+            <h5>Personal Information</h5>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <label for="fullName" class="form-label">Full Name</label>
+                    <input type="text" id="fullName" class="form-control" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" class="form-control" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="contactNumber" class="form-label">Contact Number</label>
+                    <input type="text" id="contactNumber" class="form-control" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="city" class="form-label">City</label>
+                    <input type="text" id="city" class="form-control" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="province" class="form-label">Province</label>
+                    <input type="text" id="province" class="form-control" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="occupation" class="form-label">Occupation</label>
+                    <input type="text" id="occupation" class="form-control" required>
+                </div>
+                
+                <div class="col-md-4 mb-3">
+                    <label for="ageRange" class="form-label">Age Range</label>
+                    <select id="ageRange" class="form-select" required>
+                        <option>18-25</option>
+                        <option>26-35</option>
+                        <option>36-45</option>
+                        <option>46-60</option>
+                        <option>60+</option>
+                    </select>
+                </div>
+            </div>
+
+            <br>
+            <!-- Donation Details -->
+            <h5>Donation Details</h5>
+            <div class="row">
+                <div class="col-md-2 mb-3">
+                    <label for="amount" class="form-label">Donation Amount</label>
+                    <input type="number" id="amount" class="form-control" required>
+                </div>
+                <div class="col-md-2 mb-3">
+                    <label for="currency" class="form-label">Currency</label>
+                    <select id="currency" class="form-select" required>
+                        <option>PHP</option>
+                        <option>USD</option>
+                    </select>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="type" class="form-label">Donation Type</label>
+                    <select id="type" class="form-select" required>
+                        <option>One-time</option>
+                        <option>Recurring</option>
+                    </select>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="paymentMethod" class="form-label">Payment Method</label>
+                    <select id="paymentMethod" class="form-select" required>
+                        <option>Bank Transfer</option>
+                        <option>Credit Card</option>
+                        <option>PayPal</option>
+                        <option>GCash</option>
+                        <option>Online Banking</option>
+                    </select>
+                </div>
+                
+                <div class="col-md-2 mb-3">
+                    <label for="dodate" class="form-label">Date</label>
+                    <input type="date" id="dodate" class="form-control">
+                </div>
+                <div class="col-md-2 mb-3">
+                    <label for="source" class="form-label">Source of Donation</label>
+                    <select id="source" class="form-select" required>
+                        <option>Individual</option>
+                        <option>Corporate</option>
+                        
+                    </select>
+                </div>
+                <div class="col-md-2 mb-3">
+                    <label for="anonymous" class="form-label">Anonymous Donation</label>
+                    <select id="anonymous" class="form-select" required>
+                        <option>No</option>
+                        <option>Yes</option>
+                    </select>
+                </div>
+                
+                <div class="col-md-3 mb-3">
+                    <label for="taxReceipt" class="form-label">Tax Receipt</label>
+                    <select id="taxReceipt" class="form-select" required>
+                        <option>No</option>
+                        <option>Yes</option>
+                    </select>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="consent" class="form-label">Consent for Communication</label>
+                    <select id="consent" class="form-select" required>
+                        <option>No</option>
+                        <option>Yes</option>
+                    </select>
+                </div><div class="col-md-6 mb-3">
+                    <label for="projectPreference" class="form-label">Project Preference</label>
+                    <select id="projectPreference" class="form-select" required>
+                        <option value="">Select Project Category</option>
+                        <option value="Health">Health</option>
+                        <option value="Education">Education</option>
+                        <option value="Environment">Environment</option>
+                        <option value="Economic Development">Economic Development</option>
+                        <option value="Disaster Relief">Disaster Relief</option>
+                        <option value="Human Rights">Human Rights</option>
+                        <option value="Animal Welfare">Animal Welfare</option>
+                        <option value="Technology & Innovation">Technology & Innovation</option>
+                        <option value="Agriculture">Agriculture</option>
+                        <option value="Water & Sanitation">Water & Sanitation</option>
+                        <option value="Youth Empowerment">Youth Empowerment</option>
+                        <option value="Gender Equality">Gender Equality</option>
+                        <option value="Infrastructure Development">Infrastructure Development</option>
+                        <option value="Disability Inclusion">Social</option>
+                        <option value="Cultural Preservation">Cultural Preservation</option>
+                        <option value="Sustainable Energy">Sustainable Energy</option>
+                    </select>
+                </div>
+                
+                <div class="col-md-6 mb-3">
+                    <label for="reason" class="form-label">Reason for Donating</label>
+                    <textarea id="reason" class="form-control" rows="3"></textarea>
+                </div>
+                
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+    </div>
+
+    <script src="js/donation.js"></script>
+    <script>
+        
+        document.getElementById('burgerMenuBtn').addEventListener('click', function () {
+            var sidebar = document.getElementById('sidebar');
+            var mainContent = document.getElementById('mainContent');
+            
+           
+            if (sidebar.style.transform === 'translateX(0px)') {
+                sidebar.style.transform = 'translateX(-250px)';
+                mainContent.style.marginLeft = '0';
+            } else {
+                sidebar.style.transform = 'translateX(0)';
+                mainContent.style.marginLeft = '250px';
+            }
+        });
+
+    </script>
+</body>
+</html>

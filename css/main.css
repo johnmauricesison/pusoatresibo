@@ -1,0 +1,96 @@
+
+
+
+
+
+.sidebar {
+    background-color: #f8f9fa;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    display: block;
+    transition: transform 0.3s ease;
+    z-index: 1050;
+}
+.sidebar a {
+    color: white;
+}
+
+.sidebar .nav-link {
+    text-decoration: none;
+    color: black;
+    margin-top: 1vh;
+}
+
+.nav{
+    margin-top: 100px;
+}
+
+.nav-link:hover {
+    background-color: #cacaca;
+    border-radius: 5px;
+}
+
+/* Header Bar Styling */
+.header-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9998;
+    padding: 1rem;
+    background-color: #fff;
+    border-bottom: 3px solid #ff0084;
+}
+
+.header-bar h2 {
+    margin: 0;
+    color: rgb(255, 0, 132);
+    font-weight: bold;
+}
+
+/* Logout Button */
+.btn-logout {
+    background-color: #ff0084;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20vh;
+    width: 140px;
+}
+
+.btn-logout:hover {
+    background-color: #d4006c;
+}
+
+.main-content {
+    margin-left: 250px; 
+    padding-top: 100px;
+    transition: margin-left 0.3s ease;
+}
+
+#burgerMenuBtn {
+    display: none;
+}
+
+@media (max-width: 799px) {
+   
+    .sidebar {
+        transform: translateX(-250px); 
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding-top: 120px;
+    }
+
+    #burgerMenuBtn {
+        display: block;
+    }
+
+}

@@ -1,0 +1,59 @@
+
+#drawer {
+    position: fixed;
+    top: 0;
+    right: -55%;
+    width: 55%;
+    height: 100%;
+    background-color: #f8f9fa;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    overflow-y: auto;
+    transition: right 0.3s ease;
+    z-index: 9999;
+}
+
+#drawer.open {
+    right: 0;
+}
+
+.drawer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.drawer-header button {
+    background-color: #ff0084;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.drawer-header button:hover {
+    background-color: #d4006c;
+}
+
+.card {
+    width: 130%;
+    text-align: left;
+}
+
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.table td, .table th {
+    max-width: 150px;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.table .btn {
+    padding: 5px 10px;
+    margin: 0 5px;
+}
